@@ -8,18 +8,15 @@ class UserController extends Controller
 {
     function register(Request $request)
     {
-        $validated = $request->validate([
-            'id' => 'required',
-            'name' => 'required',
-        ]);
-
         $findData = User::query()->where('id', $request->id)->get()->first();
 
         if ($findData) {
-            return $findData->update(["name" => $request->name]);
+            $findData->update(["name" => $request->name]);
         } else {
-            return User::create($request->all());
+            User::query()->create($request->all());
         }
+
+        return response()->json(["message" => "success"],200);
     }
 
     function getUser()
