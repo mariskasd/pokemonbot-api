@@ -25,7 +25,7 @@ API for Pokemon Bot User Register & View List User
         }
     ```
 * <b> List User </b>
-  * URL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<b> {{host}}/api/pokemon/register </b>
+  * URL &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<b> {{host}}/api/pokemon/user </b>
   * Method : <b> GET </b>
   * Response
     ```json
